@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Library System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+      
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+       
+        .book-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .book-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        
+        .available {
+            border-color: #4CAF50;
+            background-color: #e8f5e9;
+        }
+
+        .unavailable {
+            border-color: #F44336;
+            background-color: #ffebee;
+        }
+
+        
+        .book-summary {
+            color: #333;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+       
+        form {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"], form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the Online Library System</h1>
+    <div class="container">
+
+        
+        <section>
+            <h2>Available Books</h2>
+            <div class="book-list">
+                <div class="book-card available">
+                    <img src="book1.jpg" alt="Book Cover">
+                    <h3>Book Title 1</h3>
+                    <p class="book-summary">This is a short summary of the book content.</p>
+                </div>
+                <div class="book-card unavailable">
+                    <img src="book2.jpg" alt="Book Cover">
+                    <h3>Book Title 2</h3>
+                    <p class="book-summary">This is a short summary of the book content.</p>
+                </div>
+               
+            </div>
+        </section>
+
+       
+        <section>
+            <h2>Add or Search Books</h2>
+            <form>
+                <label for="book-title">Book Title</label>
+                <input type="text" id="book-title" name="book-title" placeholder="Enter book title">
+
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" placeholder="Enter author name">
+
+                <input type="submit" value="Add/Search">
+            </form>
+        </section>
+
+        
+        <section>
+            <h2>Borrowing History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Title</th>
+                        <th>Member Name</th>
+                        <th>Borrow Date</th>
+                        <th>Return Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Book Title 1</td>
+                        <td>mahi</td>
+                        <td>2024-01-12</td>
+                        <td>2024-01-19</td>
+                    </tr>
+                    <tr>
+                        <td>Book Title 2</td>
+                        <td>raju</td>
+                        <td>2024-01-15</td>
+                        <td>2024-01-22</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+</body>
+</html>
